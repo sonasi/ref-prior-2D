@@ -349,13 +349,11 @@ int main()
 	TGraph dt2(maxsig-1, masspoints, massprior);
 
 	TCanvas *c1 = new TCanvas("masspoints","\pi(m_{H})",200,10,700,500);
-	dt2->Draw("AC*");
-	c1.SaveAs("output/massprior.gif");
+	dt2.Draw("AC*");
+	c1->SaveAs("output/massprior.gif");
 
 	TFile outfile("output/massprior.root", "RECREATE");
 	outfile.cd();
 	dt2.Write();
-	outfile.close();
-
-
+	outfile.Close();
 }

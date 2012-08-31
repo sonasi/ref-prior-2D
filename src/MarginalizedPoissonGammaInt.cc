@@ -180,7 +180,7 @@ long double MarginalizedPoissonGammaInt::operator() (std::vector<double>& xdata,
 			priormass += _firstprior[imass][isigint] * exp(pgamma(xdata, thissigma)) / _intpoints;
 //			cout << "mass: " << imass <<  "\t pi(mu|m): " << _firstprior[imass][isigint] << "\t p(D|mu, m): " << pgamma(xdata, thissigma) << "\t priormass: " << priormass << endl;
 		}
-		cout << "mass: " << imass <<  "\t priormass: " << priormass << "\tlog(prior): " << log(priormass) << endl;
+//		cout << "mass: " << imass <<  "\t priormass: " << priormass << "\tlog(prior): " << log(priormass) << endl;
 
 //		priormass *= (double(_maxsigma)/double(_intpoints));
 //		splinevalues.push_back(priormass);
@@ -190,6 +190,6 @@ long double MarginalizedPoissonGammaInt::operator() (std::vector<double>& xdata,
     ROOT::Math::Interpolator itp( _signals, splinevalues, ROOT::Math::Interpolation::kCSPLINE);
 //	prob = itp.Eval(thismass);
 	prob = itp.Deriv2(thismass);
-	cout << prob << endl;
+//	cout << prob << endl;
 	return prob;
 }
