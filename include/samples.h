@@ -16,9 +16,6 @@
 
 using namespace std;
 
-#include "classes/hzz4e_noiso.cpp"
-#include "classes/hzz4mu_noiso.cpp"
-#include "classes/hzz2e2mu_noiso.cpp"
 
 //const TString dirIN_tmva =      "/home/jbochenek/data/HWWSep28-2011/tmva/";
 const TString dirIN =		"/home/jbochenek/data/HZZ4lNov6-2011/hzz/";
